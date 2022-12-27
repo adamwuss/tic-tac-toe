@@ -1,0 +1,37 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+}
+
+.board > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 33%;
+  height: 33%;
+}
+
+.board > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.board > div > div:hover {
+  background-color: #eee;
+}
+
+.board > div > div.O {
+  color: blue;
+}
+
+.board > div > div.X {
+  color: red;
+}
