@@ -9,7 +9,7 @@ export const initialBoard = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
-];
+]
 
 const Board: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
