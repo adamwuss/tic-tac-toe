@@ -1,18 +1,18 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Board = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 600px;
   height: 600px;
-`
+`;
 
 const TileWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 33%;
   height: 33%;
-`
+`;
 
 const Tile = styled.div`
   display: flex;
@@ -29,10 +29,10 @@ const Tile = styled.div`
   &:hover {
     background-color: #111;
   }
-`
+`;
 
 export default {
   Board,
   TileWrapper,
   Tile,
-}
+};

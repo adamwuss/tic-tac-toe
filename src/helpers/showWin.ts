@@ -14,6 +14,6 @@ const showWin = (board: BoardType, setBoard: (board: BoardType) => void) => {
     setBoard(initialBoard);
     return true;
   }
-}
+};
 
 export default showWin;
