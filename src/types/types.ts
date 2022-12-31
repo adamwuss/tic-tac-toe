@@ -1,2 +1,2 @@
-type Sign = null | 'O' | 'X';
+type Sign = null | "O" | "X";
 export type BoardType = Sign[][];

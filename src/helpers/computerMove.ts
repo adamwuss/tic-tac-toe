@@ -10,8 +10,8 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
     for (let col = 0; col < 3; col++) {
       if (board[row][col] === null) {
         const newBoard = cloneDeep(board);
-        newBoard[row][col] = 'X';
-        if (checkWin(newBoard) === 'X') {
+        newBoard[row][col] = "X";
+        if (checkWin(newBoard) === "X") {
           setBoard(newBoard);
           showWin(newBoard, setBoard);
           return;
@@ -25,9 +25,9 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
     for (let col = 0; col < 3; col++) {
       if (board[row][col] === null) {
         const newBoard = cloneDeep(board);
-        newBoard[row][col] = 'O';
-        if (checkWin(newBoard) === 'O') {
-          newBoard[row][col] = 'X';
+        newBoard[row][col] = "O";
+        if (checkWin(newBoard) === "O") {
+          newBoard[row][col] = "X";
           setBoard(newBoard);
           showWin(newBoard, setBoard);
           return;
@@ -39,7 +39,7 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
   // check middle
     if (board[1][1] === null) {
       const newBoard = cloneDeep(board);
-      newBoard[1][1] = 'X';
+      newBoard[1][1] = "X";
       setBoard(newBoard);
       showWin(newBoard, setBoard);
       return;
@@ -51,7 +51,7 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
     for (let col = 0; col < 3; col++) {
       if (board[row][col] === null) {
         const newBoard = cloneDeep(board);
-        newBoard[row][col] = 'X';
+        newBoard[row][col] = "X";
         setBoard(newBoard);
         showWin(newBoard, setBoard);
         return;

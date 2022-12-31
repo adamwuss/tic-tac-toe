@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import cloneDeep from "lodash.clonedeep";
 
 import { computerMove, showWin } from "../../helpers";
 import { BoardType } from "../../types/types";
 import { initialBoard } from "../../consts/consts";
-import './Board.css';
+import "./Board.css";
 
 const Board: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
@@ -15,7 +15,7 @@ const Board: React.FC = () => {
     }
 
     const newBoard = cloneDeep(board);
-    newBoard[row][col] = 'O';
+    newBoard[row][col] = "O";
     setBoard(newBoard);
     if (showWin(newBoard, setBoard)) {
       return;
@@ -33,10 +33,10 @@ const Board: React.FC = () => {
           {rows.map((value, colIndex) => (
             <div
               key={colIndex}
-              className={value ?? ''}
+              className={value ?? ""}
               onClick={() => handleClick(rowIndex, colIndex)}
             >
-              {value ?? ''}
+              {value ?? ""}
             </div>
           ))}
         </div>
