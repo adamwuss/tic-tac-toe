@@ -1,5 +1,5 @@
 import { BoardType } from "../types/types";
-import { initialBoard } from "../components/Board/Board";
+import { initialBoard } from "../consts/consts";
 import checkWin from "./checkWin";
 
 const showWin = (board: BoardType, setBoard: (board: BoardType) => void) => {

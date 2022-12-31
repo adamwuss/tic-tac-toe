@@ -3,13 +3,8 @@ import cloneDeep from "lodash.clonedeep";
 
 import { computerMove, showWin } from "../../helpers";
 import { BoardType } from "../../types/types";
+import { initialBoard } from "../../consts/consts";
 import './Board.css';
-
-export const initialBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-]
 
 const Board: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
