@@ -5,7 +5,7 @@ import checkWin from "./checkWin";
 import showWin from "./showWin";
 
 const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): void => {
-  // check one can win
+  // check X can win
   for (let row = 0; row < 3; row++) {
     for (let col = 0; col < 3; col++) {
       if (board[row][col] === null) {
@@ -33,6 +33,28 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
           return;
         }
       }
+    }
+  }
+
+  // check middle combination
+  if (board[0][0] === "X" && board[1][1] === "O" && board[2][2] === "O") {
+    const newBoard = cloneDeep(board);
+    if (board[0][2] === null) {
+      newBoard[0][2] = "X";
+      setBoard(newBoard);
+      showWin(newBoard, setBoard);
+      return;
+    }
+  }
+
+  // check corner combination
+  if (board[1][1] === "X" && board[2][0] === "O" && board[0][2] === "O") {
+    const newBoard = cloneDeep(board);
+    if (board[0][1] === null) {
+      newBoard[0][1] = "X";
+      setBoard(newBoard);
+      showWin(newBoard, setBoard);
+      return;
     }
   }
 
