@@ -3,8 +3,10 @@ import styled from "styled-components";
 const Board = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100vw;
+  height: 100vw;
 `;
 
 const TileWrapper = styled.div`

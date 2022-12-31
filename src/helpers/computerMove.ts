@@ -27,6 +27,7 @@ const computerMove = (board: BoardType, setBoard: (board: BoardType) => void): v
         const newBoard = cloneDeep(board);
         newBoard[row][col] = "O";
         if (checkWin(newBoard) === "O") {
+          console.log("test");
           newBoard[row][col] = "X";
           setBoard(newBoard);
           showWin(newBoard, setBoard);

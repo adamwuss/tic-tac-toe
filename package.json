@@ -32,9 +32,18 @@
     ],
     "rules": {
       "import/no-anonymous-default-export": "off",
-      "quotes": ["error", "double"],
-      "eol-last": ["error", "always"],
-      "semi": ["error", "always"]
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "eol-last": [
+        "error",
+        "always"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
     }
   },
   "browserslist": {
