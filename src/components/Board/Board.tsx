@@ -4,7 +4,7 @@ import cloneDeep from "lodash.clonedeep";
 import { computerMove, showWin } from "../../helpers";
 import { BoardType } from "../../types/types";
 import { initialBoard } from "../../consts/consts";
-import "./Board.css";
+import Styled from "./Board.styled"
 
 const Board: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
@@ -27,21 +27,20 @@ const Board: React.FC = () => {
   };
 
   return (
-    <div className="board">
+    <Styled.Board>
       {board.map((rows, rowIndex) => (
-        <div key={rowIndex}>
+        <Styled.TileWrapper key={rowIndex}>
           {rows.map((value, colIndex) => (
-            <div
+            <Styled.Tile
               key={colIndex}
-              className={value ?? ""}
               onClick={() => handleClick(rowIndex, colIndex)}
             >
               {value ?? ""}
-            </div>
+            </Styled.Tile>
           ))}
-        </div>
+        </Styled.TileWrapper>
       ))}
-    </div>
+    </Styled.Board>
   );
 };
 

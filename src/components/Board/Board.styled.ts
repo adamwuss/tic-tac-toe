@@ -1,18 +1,20 @@
-.board {
+import styled from "styled-components"
+
+const Board = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 600px;
   height: 600px;
-}
+`
 
-.board > div {
+const TileWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 33%;
   height: 33%;
-}
+`
 
-.board > div > div {
+const Tile = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,16 +24,15 @@
   font-size: 100px;
   font-weight: bold;
   cursor: pointer;
-}
+  color: ${({ children }) => children === "O" ? "Red" : "cadetblue"};
+  
+  &:hover {
+    background-color: #111;
+  }
+`
 
-.board > div > div:hover {
-  background-color: #111;
-}
-
-.board > div > div.O {
-  color: cadetblue;
-}
-
-.board > div > div.X {
-  color: red;
+export default {
+  Board,
+  TileWrapper,
+  Tile,
 }
