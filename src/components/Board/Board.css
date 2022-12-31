@@ -25,11 +25,11 @@
 }
 
 .board > div > div:hover {
-  background-color: #eee;
+  background-color: #111;
 }
 
 .board > div > div.O {
-  color: blue;
+  color: cadetblue;
 }
 
 .board > div > div.X {

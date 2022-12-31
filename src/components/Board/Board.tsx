@@ -26,7 +26,9 @@ const Board: React.FC = () => {
       return;
     }
 
-    computerMove(newBoard, setBoard);
+    setTimeout(() => {
+      computerMove(newBoard, setBoard);
+    }, 100);
   };
 
   return (

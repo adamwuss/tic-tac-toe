@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './App.css';
 import Board from "./components/Board";
+import Styled from "./App.styled";
 
 function App() {
   return (
-    <div className="app">
+    <Styled.App>
       <Board />
-    </div>
+    </Styled.App>
   );
 }
 
