@@ -17,7 +17,7 @@ const Board: React.FC = () => {
     const newBoard = cloneDeep(board);
     newBoard[row][col] = "O";
     setBoard(newBoard);
-    if (showWin(newBoard)) {
+    if (showWin(newBoard, setBoard)) {
       return;
     }
 
